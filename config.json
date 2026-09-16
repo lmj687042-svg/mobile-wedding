@@ -1,0 +1,25 @@
+{
+  "groom": "이용재",
+  "bride": "이민진",
+
+  "wedding": {
+    "date": "2027-01-02",
+    "time": "",
+    "venue": "아펠가모 선릉",
+    "address": "",
+    "tel": ""
+  },
+
+  "location": {
+    "subway": "",
+    "bus": "",
+    "parking": "",
+    "kakao": "https://map.kakao.com/",
+    "naver": "https://map.naver.com/"
+  },
+
+  "storyImages": [
+    "images/story/1.jpg",
+    "images/story/2.jpg"
+  ]
+}

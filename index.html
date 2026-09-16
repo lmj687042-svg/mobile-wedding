@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f8f6">
+  <meta name="description" content="우리의 결혼식에 소중한 분들을 초대합니다.">
+  <meta property="og:title" content="우리의 결혼식">
+  <meta property="og:description" content="소중한 날, 소중한 분들을 초대합니다.">
+  <meta property="og:image" content="images/og/1.jpg">
+  <title>OUR WEDDING</title>
+
+  <!-- 레퍼런스처럼 영문은 얇은 세리프, 한글은 차분한 명조 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<main class="page">
+
+  <!-- =====================================================
+       01 COVER
+       사진: images/hero/1.jpg
+       ===================================================== -->
+  <section class="cover">
+    <div class="heart-particles" id="heartParticles" aria-hidden="true"></div>
+    <h1 class="cover-title" aria-label="OUR WEDDING">
+      <span>OUR</span>
+      <span>WEDDING</span>
+    </h1>
+
+    <div class="cover-photo-wrap reveal">
+      <img class="cover-photo" src="images/hero/1.jpg" alt="신랑 신부 사진">
+      <div class="cover-info">
+        <div class="names" id="coverNames">GROOM & BRIDE</div>
+        <div id="coverDate">2026.06.06</div>
+        <div id="coverVenue">OUR WEDDING DAY</div>
+      </div>
+    </div>
+
+    <div class="cover-scroll">SCROLL ↓</div>
+  </section>
+
+  <!-- =====================================================
+       01 WITH LOVE
+       ===================================================== -->
+  <section class="section">
+    <div class="section-number">01</div>
+    <div class="section-title-wrap"><span class="title-heart">♥</span><h2 class="section-title"><span class="red">WITH</span> LOVE</h2><span class="title-heart">♥</span></div>
+
+    <div class="story-intro reveal">
+      함께한 시간은 우리를 닮아가게 했고,<br>
+      이제는 같은 곳을 바라보며<br>
+      새로운 하루를 시작하려 합니다.<br><br>
+      귀한 걸음으로 축복해 주시면<br>
+      오래도록 감사히 간직하겠습니다.
+    </div>
+
+    <div id="storyPhotos"></div>
+
+    <div class="family reveal">
+      <div class="family-line">
+        <span class="parent">신랑 아버지 ○○○ · 어머니 ○○○</span>
+        <span class="child">장남 ○○○</span>
+      </div>
+      <div class="family-line">
+        <span class="parent">신부 아버지 ○○○ · 어머니 ○○○</span>
+        <span class="child">장녀 ○○○</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       02 OUR DAY
+       ===================================================== -->
+  <section class="section">
+    <div class="section-number">02</div>
+    <div class="section-title-wrap"><span class="title-heart">♥</span><h2 class="section-title"><span class="red">OUR</span> DAY</h2><span class="title-heart">♥</span></div>
+
+    <div class="date-lead reveal">
+      <div class="big-date" id="dateLead">2026.06.06</div>
+      <div class="weekday" id="weekday">SATURDAY</div>
+    </div>
+
+    <div class="calendar reveal">
+      <div class="calendar-month" id="calendarMonth">JUNE</div>
+      <div class="calendar-grid" id="calendarGrid"></div>
+
+      <div class="date-detail">
+        <div id="dateKorean"></div>
+        <div id="venueKorean"></div>
+      </div>
+
+      <div class="calendar-buttons">
+        <button class="line-button" id="calendarBtn">ADD TO CALENDAR</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       03 LOCATION
+       지도 이미지를 images/map/1.jpg 로 넣어주세요.
+       ===================================================== -->
+  <section class="section">
+    <div class="section-number">03</div>
+    <div class="section-title-wrap"><span class="title-heart">♥</span><h2 class="section-title">LOCATION</h2><span class="title-heart">♥</span></div>
+
+    <div class="map-wrap reveal">
+      <img src="images/map/1.jpg" alt="웨딩홀 약도">
+    </div>
+
+    <div class="location-info">
+      <div class="venue" id="venueName">웨딩홀</div>
+      <div class="address" id="venueAddress">서울특별시 ○○구 ○○로 00</div>
+
+      <div class="transport">
+        <div class="transport-row">
+          <strong>SUBWAY</strong>
+          <span id="subway">○호선 ○○역 ○번 출구에서 도보 5분</span>
+        </div>
+        <div class="transport-row">
+          <strong>BUS</strong>
+          <span id="bus">○○○○, ○○○○번 버스 이용</span>
+        </div>
+        <div class="transport-row">
+          <strong>PARKING</strong>
+          <span id="parking">웨딩홀 주차장 이용</span>
+        </div>
+      </div>
+
+      <div class="map-buttons">
+        <a class="line-button" id="kakaoMap" href="#" target="_blank">KAKAOMAP</a>
+        <a class="line-button" id="naverMap" href="#" target="_blank">NAVER MAP</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       04 ACCOUNT
+       ===================================================== -->
+  <section class="section">
+    <div class="section-number">04</div>
+    <div class="section-title-wrap"><span class="title-heart">♥</span><h2 class="section-title">ACCOUNT</h2><span class="title-heart">♥</span></div>
+
+    <div class="account-list">
+      <div class="account-group">
+        <button class="account-toggle">
+          <span>GROOM · 신랑</span><span>＋</span>
+        </button>
+        <div class="account-content">
+          <div class="account-row">
+            <span>○○○ · ○○은행 000-0000-0000</span>
+            <button class="copy-btn" data-copy="000-0000-0000">COPY</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="account-group">
+        <button class="account-toggle">
+          <span>BRIDE · 신부</span><span>＋</span>
+        </button>
+        <div class="account-content">
+          <div class="account-row">
+            <span>○○○ · ○○은행 000-0000-0000</span>
+            <button class="copy-btn" data-copy="000-0000-0000">COPY</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       05 PHOTO
+       images/gallery/1.jpg, 2.jpg ...
+       ===================================================== -->
+  <section class="section editorial">
+    <div class="section-number">05</div>
+    <div class="section-title-wrap"><span class="title-heart">♥</span><h2 class="section-title">PHOTO</h2><span class="title-heart">♥</span></div>
+    <div class="photo-grid" id="gallery"></div>
+  </section>
+
+  <footer>
+    <div class="footer-mark">GROOM & BRIDE</div>
+    <div class="footer-date" id="footerDate">2026.06.06</div>
+    <div class="footer-line"></div>
+    <div class="footer-copy">THANK YOU FOR CELEBRATING WITH US</div>
+  </footer>
+
+</main>
+
+<button class="top-button" id="topButton">↑</button>
+
+<!-- PHOTO MODAL -->
+<div class="modal" id="photoModal" aria-hidden="true">
+  <button class="modal-close" aria-label="닫기">×</button>
+  <button class="modal-prev" aria-label="이전">‹</button>
+  <img id="modalImage" src="" alt="">
+  <button class="modal-next" aria-label="다음">›</button>
+  <div class="modal-count" id="modalCount"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
