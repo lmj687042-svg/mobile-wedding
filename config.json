@@ -4,16 +4,15 @@
 
   "wedding": {
     "date": "2027-01-02",
-    "time": "",
+    "time": "11:00",
     "venue": "아펠가모 선릉",
-    "address": "",
-    "tel": ""
+    "address": "서울특별시 강남구 테헤란로 322 한신인터밸리24빌딩 4층",
+    "tel": "02-2183-0230"
   },
 
   "location": {
-    "subway": "",
-    "bus": "",
-    "parking": "",
+    "subway": "2호선 선릉역 4번출구에서 5분거리",
+    "parking": "건물 내 지하주차장 이용",
     "kakao": "https://map.kakao.com/",
     "naver": "https://map.naver.com/"
   },
