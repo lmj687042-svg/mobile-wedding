@@ -24,14 +24,23 @@
      INTRO / 초대장 열기 전 화면
      ===================================================== -->
 <div class="intro-screen" id="introScreen">
-  <div class="intro-heart-particles" id="introHeartParticles" aria-hidden="true"></div>
-  <div class="intro-kicker">INVITATION</div>
-  <div class="intro-names">
-    <span id="introGroom">GROOM</span>
-    <span class="intro-heart">♥</span>
-    <span id="introBride">BRIDE</span>
+  <div class="intro-inner">
+    <div class="intro-heart-particles" id="introHeartParticles" aria-hidden="true"></div>
+    <svg class="intro-ribbon" viewBox="0 0 160 74" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M78 42 C56 10, 16 10, 8 30 C2 44, 20 52, 36 44 C50 37, 66 37, 78 42 Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M82 42 C104 10, 144 10, 152 30 C158 44, 140 52, 124 44 C110 37, 94 37, 82 42 Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M80 44 C74 54, 70 60, 64 70" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M80 44 C86 54, 90 60, 96 70" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="80" cy="42" r="5" fill="var(--white)" stroke="currentColor" stroke-width="1.4"/>
+    </svg>
+    <div class="intro-kicker">INVITATION</div>
+    <div class="intro-names">
+      <span id="introGroom">GROOM</span>
+      <span class="intro-heart">♥</span>
+      <span id="introBride">BRIDE</span>
+    </div>
+    <button class="intro-open" id="introOpenBtn">초대장 열기</button>
   </div>
-  <button class="intro-open" id="introOpenBtn">초대장 열기</button>
 </div>
 
 <main class="page">

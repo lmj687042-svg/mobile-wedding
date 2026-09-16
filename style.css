@@ -29,7 +29,7 @@ a { color: inherit; text-decoration: none; }
 /* 모바일 청첩장 폭 */
 .page {
   width: 100%;
-  max-width: 620px;
+  max-width: 680px;
   margin: 0 auto;
   overflow: hidden;
   background: var(--paper);
@@ -568,7 +568,7 @@ footer {
 }
 
 @media (min-width: 621px) {
-  body { background: #e9e9e5; }
+  body { background: var(--red); }
   .page { box-shadow: 0 0 40px rgba(0,0,0,.06); }
 }
 
@@ -589,17 +589,19 @@ footer {
    ===================================================== */
 body.intro-lock { overflow: hidden; height: 100svh; }
 
+/* 인트로가 떠 있는 동안 뒤쪽 본문 콘텐츠가 절대 비치지 않도록 완전히 숨김 */
+body.intro-lock main.page,
+body.intro-lock .top-button {
+  display: none;
+}
+
 .intro-screen {
   position: fixed;
   inset: 0;
   z-index: 300;
-  background: var(--paper);
+  background: var(--red);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 34px;
-  text-align: center;
   transition: opacity .7s ease, visibility .7s ease;
 }
 
@@ -607,6 +609,20 @@ body.intro-lock { overflow: hidden; height: 100svh; }
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.intro-inner {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  min-height: 100%;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
 }
 
 .intro-heart-particles {
@@ -617,10 +633,18 @@ body.intro-lock { overflow: hidden; height: 100svh; }
   z-index: 1;
 }
 
+.intro-ribbon {
+  width: 96px;
+  height: auto;
+  color: var(--red);
+  z-index: 2;
+}
+
 .intro-kicker {
   font-family: var(--serif);
-  font-size: 11px;
-  letter-spacing: .35em;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .38em;
   color: var(--red);
   z-index: 2;
 }
@@ -634,6 +658,7 @@ body.intro-lock { overflow: hidden; height: 100svh; }
   letter-spacing: .06em;
   color: var(--black);
   z-index: 2;
+  margin-top: 6px;
 }
 
 .intro-heart {
@@ -644,6 +669,7 @@ body.intro-lock { overflow: hidden; height: 100svh; }
 
 .intro-open {
   z-index: 2;
+  margin-top: 12px;
   padding: 13px 34px;
   border: 1px solid var(--black);
   font-family: var(--kr);
@@ -657,8 +683,4 @@ body.intro-lock { overflow: hidden; height: 100svh; }
   background: var(--red);
   border-color: var(--red);
   color: #fff;
-}
-
-@media (min-width: 621px) {
-  .intro-screen { max-width: 620px; left: 50%; transform: translateX(-50%); }
 }
