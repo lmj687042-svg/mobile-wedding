@@ -8,11 +8,10 @@
   let weddingDate = null;
   let dateObj = null;
 
-  // 작은 빨간 하트가 첫 화면에서 자연스럽게 떠오르는 효과
-  function initHeartParticles() {
-    const wrap = document.getElementById("heartParticles");
+  // 작은 빨간 하트가 자연스럽게 떠오르는 효과 (커버 화면 / 인트로 화면 공용)
+  function initHeartParticles(targetId = "heartParticles", count = 10) {
+    const wrap = document.getElementById(targetId);
     if (!wrap) return;
-    const count = 10;
     for (let i = 0; i < count; i++) {
       const heart = document.createElement("span");
       heart.className = "floating-heart";
@@ -73,6 +72,23 @@
     } catch {
       showToast("복사하지 못했습니다.");
     }
+  }
+
+  /* 초대장 열기 전 인트로 화면 */
+  function initIntro() {
+    const introGroom = $("#introGroom");
+    const introBride = $("#introBride");
+    const screen = $("#introScreen");
+    const btn = $("#introOpenBtn");
+    if (!screen || !btn) return;
+
+    if (introGroom) introGroom.textContent = CONFIG.groom;
+    if (introBride) introBride.textContent = CONFIG.bride;
+
+    btn.addEventListener("click", () => {
+      screen.classList.add("hide");
+      document.body.classList.remove("intro-lock");
+    });
   }
 
   function initConfig() {
@@ -363,7 +379,9 @@
     weddingDate = new Date(`${CONFIG.wedding.date}T${time}:00`);
     dateObj = new Date(`${CONFIG.wedding.date}T12:00:00`);
 
-    initHeartParticles();
+    initHeartParticles("heartParticles", 10);
+    initHeartParticles("introHeartParticles", 8);
+    initIntro();
     initConfig();
     buildCalendar();
     loadStoryImages();

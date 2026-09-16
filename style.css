@@ -582,3 +582,83 @@ footer {
 .section-title-wrap{display:flex;align-items:center;justify-content:center;gap:8px}
 .section-title-wrap .title-heart{color:var(--red);font-size:9px;line-height:1;display:inline-flex;align-items:center;justify-content:center;height:1em;transform:none;position:relative;top:-1px}
 .section-title-wrap .section-title{font-weight:400;letter-spacing:-.06em}
+
+/* =====================================================
+   INTRO SCREEN ("신랑 ♥ 신부 / 초대장 열기")
+   본문과 같은 색감(--paper, --red, --serif)을 그대로 사용
+   ===================================================== */
+body.intro-lock { overflow: hidden; height: 100svh; }
+
+.intro-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  text-align: center;
+  transition: opacity .7s ease, visibility .7s ease;
+}
+
+.intro-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.intro-heart-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.intro-kicker {
+  font-family: var(--serif);
+  font-size: 11px;
+  letter-spacing: .35em;
+  color: var(--red);
+  z-index: 2;
+}
+
+.intro-names {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--serif);
+  font-size: clamp(22px, 6vw, 30px);
+  letter-spacing: .06em;
+  color: var(--black);
+  z-index: 2;
+}
+
+.intro-heart {
+  color: var(--red);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.intro-open {
+  z-index: 2;
+  padding: 13px 34px;
+  border: 1px solid var(--black);
+  font-family: var(--kr);
+  font-size: 12px;
+  letter-spacing: .18em;
+  background: transparent;
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.intro-open:active {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
+@media (min-width: 621px) {
+  .intro-screen { max-width: 620px; left: 50%; transform: translateX(-50%); }
+}
